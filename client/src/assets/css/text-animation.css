@@ -1,0 +1,23 @@
+
+#lottie-animation-modal .text-container {
+    position: relative;
+    width: 100%;
+}
+  
+#lottie-animation-modal .text-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+  
+#lottie-animation-modal  .text-visible {
+    opacity: 1;
+}
+#lottie-animation-modal{
+    max-width: 350px !important;
+}
+
+#lottie-animation-modal h5{
+    padding: 0 20px;
+    height: 40px;
+    margin-top: 10px;
+}

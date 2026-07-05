@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Sidebar Legacy Classes — Premium Glassmorphism Override
+   These styles target the existing Sidebar.jsx nav item class names
+   (sidebar-item, sidebar-link, has-arrow, etc.) without rewriting all JSX.
+   ========================================================================== */
+
+/* ---- COLLAPSE VISIBILITY (replaces old jQuery Bootstrap behavior) ---- */
+/* Submenus are hidden by default via max-height - but only for non-React-Bootstrap ones */
+.first-level:not(.collapse),
+.second-level:not(.collapse) {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+}
+
+/* When parent sidebar-item has "in" class, show submenu (for old pattern) */
+.sidebar-item.in>.first-level:not(.collapse) {
+    max-height: 1000px;
+}
+
+/* Overrides for React Bootstrap Collapse component */
+.collapse.first-level {
+    /* Let React Bootstrap handle height, just hide overflow */
+    overflow: hidden;
+}
+
+.collapse.show.first-level {
+    overflow: visible;
+    max-height: none;
+}
+
+.collapsing.first-level {
+    max-height: none;
+}
+
+/* ---- Remove all other default list decorations ---- */
+.sidebarnav,
+.sidebarnav ul,
+.first-level,
+.second-level {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Padding for the top nav list */
+.sidebarnav {
+    padding: 10px 0;
+}
+
+/* ---- SIDEBAR ITEM ---- */
+.sidebar-item {
+    margin: 2px 1px;
+    border-bottom: 1px solid #ffffff36;
+    border-radius: 0 0 10px 10px;
+}
+.sidebar-item > ul > .sidebar-item {
+    margin: 2px 1px;
+    border-bottom: none;
+    border-radius: none;
+}
+
+/* ---- SIDEBAR LINK ---- */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 3px solid transparent;
+}
+
+body.light-mode .sidebar-link {
+    color: rgba(230, 235, 245, 0.90);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.95);
+    transform: translateX(2px);
+}
+
+body.light-mode .sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.10);
+    color: #ffffff;
+}
+
+/* Active state via NavLink */
+.sidebar-link.active,
+.sidebar-item.in>.sidebar-link:first-child:not(.has-arrow) {
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.2));
+    color: white !important;
+    border-left-color: var(--sidebar-active-border-dark, #E31E24);
+    font-weight: 600;
+}
+
+body.light-mode .sidebar-link.active {
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.22));
+    color: white !important;
+    border-left-color: var(--sidebar-active-border-dark, #E31E24);
+}
+
+/* ---- ICON STYLES ---- */
+.sidebar-link i,
+.sidebar-link svg {
+    font-size: 17px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+/* ---- HAS-ARROW TOGGLE ---- */
+.sidebar-link.has-arrow {
+    position: relative;
+    border-radius: 8px;
+}
+
+.sidebar-link.has-arrow::after {
+    content: '›';
+    margin-left: auto;
+    font-size: 16px;
+    opacity: 0.4;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sidebar-item.in>.sidebar-link.has-arrow::after {
+    transform: rotate(90deg);
+    opacity: 0.9;
+}
+
+/* Active parent toggle */
+.sidebar-link.has-arrow.active,
+.sidebar-item.in>.sidebar-link.has-arrow {
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.15));
+    color: white;
+}
+
+body.light-mode .sidebar-link.has-arrow.active,
+body.light-mode .sidebar-item.in>.sidebar-link.has-arrow {
+    background: var(--sidebar-active-light, rgba(227, 30, 36, 0.08));
+    color: var(--accent-light, #E31E24);
+}
+
+/* ---- COLLAPSE SUBMENU ---- */
+.first-level,
+.second-level {
+    padding-left: 28px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* React Bootstrap Collapse handles visibility */
+.first-level.list-unstyled {
+    padding-left: 32px;
+}
+
+.first-level .sidebar-item {
+    margin: 1px 0;
+}
+
+.first-level .sidebar-link {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 8px 12px;
+    color: rgba(255, 255, 255, 0.6);
+    border-left: 3px solid transparent;
+}
+
+body.light-mode .first-level .sidebar-link {
+    color: rgba(210, 218, 235, 0.85);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.first-level .sidebar-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.light-mode .first-level .sidebar-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.first-level .sidebar-link.active {
+    color: var(--sidebar-link-hover-dark, #ffffff) !important;
+    border-left-color: var(--sidebar-active-border-dark, #E31E24);
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.15));
+}
+
+body.light-mode .first-level .sidebar-link.active {
+    color: white !important;
+    border-left-color: var(--sidebar-active-border-dark, #E31E24);
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.20));
+}
+
+/* ---- ROUND-16 ICON (submenu) ---- */
+.round-16 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.light-mode .round-16 {
+    background: rgba(255, 255, 255, 0.10);
+    color: rgba(220, 225, 240, 0.85);
+}
+
+/* ---- ACTIVE HIGHLIGHT (legacy #red-bg) ---- */
+#red-bg {
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.15)) !important;
+    color: white !important;
+}
+
+body.light-mode #red-bg {
+    background: var(--sidebar-active-dark, rgba(227, 30, 36, 0.18)) !important;
+    color: white !important;
+}
+
+/* ---- HIDE-MENU TEXT VISIBILITY ---- */
+.hide-menu {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---- SIDEBAR SECTION LABEL ---- */
+.nav-small-cap {
+    display: flex;
+    align-items: center;
+    padding: 14px 22px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode .nav-small-cap {
+    color: rgba(180, 188, 210, 0.55);
+}
+
+.nav-small-cap i {
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+/* ---- CURSOR UTIL ---- */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.sidebar-item > ul{
+    position: relative;
+}
+.sidebar-item > ul::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: -7px;
+    width: 2px;
+    height: calc(100% - 21px);
+    background: #ffffff;
+}
+.sidebar-item > ul > .sidebar-item .sidebar-link {
+    position: relative;
+    padding-left: 20px;
+}
+.sidebar-item > ul > .sidebar-item .sidebar-link::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 34%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 15px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-left-radius: 10px;
+}
+.logo-container-glass {
+    background: #ffffff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.logo-container-glass img {
+    width: 130px;
+}
+/* Base sidebar */
+.modern-sidebar-pane {
+  width: 250px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Mini sidebar */
+.modern-sidebar-pane.mini-sidebar {
+  width: 70px !important;
+}
+
+/* Full sidebar */
+.modern-sidebar-pane.full {
+  width: 250px !important;
+}
+/* Hover expansion removed to ensure sidebar only expands/collapses via toggle click */
+/* .modern-sidebar-pane.mini-sidebar:hover {
+  width: 250px !important;
+} */
+
+.modern-sidebar-pane.mini-sidebar .logo-container-glass{
+    display: none;
+}
+.modern-sidebar-pane.full .sidebar-logo-area > .sidebar-brand{
+    display: none;
+}
+.modern-sidebar-pane.mini-sidebar .hide-menu {
+    display: none;
+}
+.modern-sidebar-pane.mini-sidebar .sidebar-link.has-arrow::after {
+  display: none;
+}
+/* Hide in mini sidebar */
+.modern-sidebar-pane.mini-sidebar .logo-container-glass {
+  display: none;
+}
+
+.modern-sidebar-pane.mini-sidebar .hide-menu {
+  display: none;
+}
+
+.modern-sidebar-pane.mini-sidebar .sidebar-link.has-arrow::after {
+  display: none;
+}
+
+/* Hover sub-elements removed to maintain mini-sidebar state */
+/* .modern-sidebar-pane.mini-sidebar:hover .logo-container-glass {
+  display: flex;
+}
+
+.modern-sidebar-pane.mini-sidebar:hover .hide-menu {
+  display: inline;
+}
+
+.modern-sidebar-pane.mini-sidebar:hover .sidebar-link.has-arrow::after {
+  display: block;
+}
+
+.modern-sidebar-pane.mini-sidebar:hover .sidebar-link {
+    justify-content: left;
+} */
+.modern-sidebar-pane.full .sidebar-logo-area > .sidebar-brand{
+    display: none;
+}
+/* Hover rules removed */
+/* .modern-sidebar-pane.mini-sidebar:hover .sidebar-brand{
+    display: none;
+} */
+.modern-sidebar-pane.mini-sidebar .sidebar-link {
+    justify-content: center;
+}
+.sidebar-brand{
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.sidebar-brand img{
+width: 50px;
+}
+/* Hover rules removed */
+/* .modern-sidebar-pane.mini-sidebar:hover .sidebar-brand{
+    justify-content: center;
+} */

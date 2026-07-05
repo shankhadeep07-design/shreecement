@@ -1,0 +1,1057 @@
+.register-container {
+  display: block;
+  justify-content: end;
+  align-items: end;
+  height: 100vh;
+  background-color: #000;
+  overflow-y: hidden;
+  /* background: url('/src/assets/images/logo-ng.jpg') no-repeat center center/cover;
+    background: url('/src/assets/images/login-bg.jpg') no-repeat center center/cover; */
+}
+
+.register-container video {
+  width: 100%;
+}
+
+.register-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(15 16 16 / 50%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.register-container .curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100% - 600px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.register-container .curve:after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0% 100px 0;
+  box-shadow: 0 0 0 999px #ffffff;
+}
+
+
+.register-container .register-body {
+  width: 92%;
+  margin-top: 5px;
+}
+
+.register-container .text-danger {
+  font-size: 11px;
+}
+
+.register-container .register-box {
+  padding: 30px 10px 30px 10px;
+  border-top-left-radius: 75px;
+  text-align: center;
+  width: 600px;
+  height: auto !important;
+  background: url(/src/assets/images/map-corner.png) no-repeat center center / cover;
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  right: 0px;
+  background-color: #fff;
+  background-size: 80%;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+/* .register-body {
+  width: 300px;
+  margin-top: 5px;
+} */
+
+
+
+.register-container .login-box {
+  padding: 0px 10px 20px 10px;
+  border-top-left-radius: 75px;
+  text-align: center;
+  width: 440px;
+  height: 480px;
+  background: url(/src/assets/images/map-corner.png) no-repeat center center / cover;
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  right: 0px;
+  background-color: #fff;
+  /* background-size: 80%; */
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.register-container .ant-select-selector {
+  border: 1px solid #363636;
+  background: #ffffff;
+  height: 44px;
+}
+
+.register-container #login {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  top: 382px;
+}
+
+.register-container #login .button {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: "Segoe UI";
+  letter-spacing: 1px;
+}
+
+.register-container #login .button:before {
+  border-radius: 100px;
+  border: 2px solid #65c582;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 52%;
+  top: 52%;
+  height: 110px;
+  width: 110px;
+  margin-left: -57px;
+  margin-top: -57px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+
+.register-container #login .button:hover:before {
+  transform: scale(1.05);
+}
+
+.register-container #login .button.circle {
+  background: #0064a4;
+  border: none;
+  border-radius: 900px;
+  color: #f8ffb2;
+  cursor: pointer;
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  position: relative;
+  margin: auto;
+  margin-top: -15px;
+  transition: 0.5s;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+
+
+
+
+#login .ant-input-affix-wrapper {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+  padding: 3px 11px;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  border-radius: 32px;
+  border: solid 2px #77be4d;
+  transition: all 0.2s;
+  box-shadow: 0 0 15px rgb(35 106 6 / 48%), 0 0 15px rgb(0 0 0 / 15%) inset;
+  height: 50px !important;
+
+}
+
+#login .button.circle:hover {
+  background: rgb(35, 160, 112);
+  padding: -2px;
+}
+
+
+
+.home-content {
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+}
+
+
+
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.vedanta {
+  color: #0073e6;
+}
+
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+#login .forgot-password {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  right: -200px;
+}
+
+/*------------------------------------------------------------*/
+
+
+
+.login-logo img {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.register-body .left-side {
+  align-items: center;
+  animation: AnimationName 20s ease infinite;
+  background: linear-gradient(314deg, #ed1c24, #faab53, #1968b3, #faab53);
+  background-size: 800% 800%;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%
+}
+
+@media (max-width: 991px) {
+  .register-body .left-side {
+    display: none
+  }
+
+  .register-body .login-logo img {
+    width: 50%
+  }
+}
+
+/* 
+.register-body .left-side h2 {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 5px 10px;
+  padding: 15px 0;
+  position: relative;
+  text-align: center
+} */
+
+/* .register-body .right-side {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - 162px);
+  justify-content: center;
+  padding: 5px 15px
+}
+
+.register-body .btn-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  margin-bottom: 32px
+}
+
+.register-body .btn-group .btn {
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 2px solid #6b7280;
+  border-radius: 5px;
+  column-gap: 4px;
+  cursor: pointer;
+  display: flex;
+  font-size: .8rem;
+  font-weight: 500;
+  padding: 8px 6px;
+  transform: scale(1);
+  transition: transform .1s ease,background-color .5s,color .5s;
+  width: -webkit-max-content;
+  width: max-content
+}
+
+.register-body .btn-group .btn:active {
+  transform: scale(.97)
+}
+
+.register-body .btn-group .btn:hover {
+  background-color: #1968b3;
+  color: #eee
+}
+
+.register-body .btn img {
+  height: 16px;
+  width: 16px
+}
+
+.register-body .logo {
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2px
+}
+
+.register-body .welcome-text h2 {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: center
+} */
+
+.register-body input {
+  background-color: #fff;
+  font-size: .85rem;
+  font-weight: 600;
+  margin: 0;
+  outline: 0;
+  padding: 8px 20px;
+  transition: all .5s;
+}
+
+
+.register-body input:-webkit-autofill,
+.register-body input:-webkit-autofill:active,
+.register-body input:-webkit-autofill:focus,
+.register-body input:-webkit-autofill:hover {
+  -webkit-text-fill-color: #5f5f53;
+  -webkit-background-clip: text;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: #fff;
+}
+
+.register-body .ant-input-affix-wrapper {
+  border-radius: 30px;
+  min-height: 40px;
+}
+
+.register-body .ant-input-affix-wrapper input:focus {
+  outline: none;
+  border: none;
+}
+
+.ant-select-selector {
+  /* border: 1px solid #000 !important; */
+  background: #ffffff;
+}
+
+.register-body label {
+  font-size: .9rem;
+  font-weight: 600
+}
+
+.ant-select-single {
+  font-size: 14px;
+  height: 40px;
+}
+
+.register-body .reg-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 24px;
+  margin: 2px 0 8px;
+  border: 2px solid #eaeaea;
+  border-radius: 50px;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #f6f6f6;
+  background: linear-gradient(314deg, #ed1c24, #c73408, #e96106);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
+}
+
+.register-body .reg-btn.blue {
+  background: #074a33;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+  color: orange;
+
+}
+
+
+
+.ant-form-item {
+  margin-bottom: 12px !important;
+}
+
+.register-body .rmsc .dropdown-container {
+  border-radius: 30px !important;
+  text-align: left;
+}
+
+.ant-btn.reg-btn {
+  height: 48px;
+}
+
+.ant-btn.reg-btn .ant-btn-variant-solid:hover {
+  background-color: orange !important;
+  color: #074a33 !important;
+}
+
+.dropdown-content {
+  text-align: left !important;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+}
+
+.dropdown-content li {
+  text-align: left !important;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+
+}
+
+
+
+.css-1s2u09g-control {
+  text-align: left !important;
+}
+
+.css-12jo7m5 {
+  text-align: left !important;
+}
+
+
+
+.register-body .reg-btn:hover {
+  background-color: orange !important;
+  color: #074a33 !important;
+}
+
+.register-body .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.register-body a:active,
+.register-body a:hover,
+.register-body a:link,
+.register-body a:visited {
+  text-decoration: none
+}
+
+.register-body a {
+  color: #000;
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  transition: all .4s ease
+}
+
+.register-body a:hover {
+  color: #0d85b9
+}
+
+.register-body .text-gray {
+  color: #a8a8a8
+}
+
+.captcha-sec {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  margin: 5px 0
+}
+
+.captcha-sec .cap-img {
+  font-Size: 20px;
+  font-Weight: 700;
+  background: #faa61a;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 2px 10px
+}
+
+.captcha-sec .ref-btn {
+  align-Items: center;
+  justify-Content: center;
+  background: #003975;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 19px;
+  height: 32px;
+  width: 53px
+}
+
+.captcha-sec input {
+  padding: 7px 5px
+}
+
+
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 11%
+  }
+
+  50% {
+    background-position: 100% 90%
+  }
+
+  100% {
+    background-position: 0% 11%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 11%
+  }
+
+  50% {
+    background-position: 100% 90%
+  }
+
+  100% {
+    background-position: 0% 11%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 11%
+  }
+
+  50% {
+    background-position: 100% 90%
+  }
+
+  100% {
+    background-position: 0% 11%
+  }
+}
+
+.ngo-registration-title h2 {
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.ngo-registration-section .register-box {
+  display: inline-table;
+}
+
+.ngo-registration-section .ant-form-item .ant-form-item-label>label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f1f1f;
+}
+.ngo-registration-section .form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-align: left;
+  display: flex;
+}
+
+.ngo-registration-section .ant-picker .ant-picker-input>input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  font-size: 13px;
+  line-height: 1.5714285714285714;
+  transition: all 0.2s;
+  flex: auto;
+  min-width: 1px;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  border-radius: 25px;
+}
+
+.ngo-registration-section .ant-picker-outlined {
+  background: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  min-height: 29px;
+  /* border-radius: 50px; */
+}
+
+.ngo-registration-section .ant-upload.ant-upload-select {
+  width: 100%;
+}
+
+
+
+.ngo-registration-section .ant-input-number .ant-input-number-input {
+  font-size: 13px;
+  height: 30px;
+  padding: 0px 15px;
+  border-radius: 60px;
+  width: 100%;
+  text-align: left;
+  justify-content: left;
+  color: #b2b0b0;
+}
+
+.register-container.ngo-registration-section .register-body {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ngo-registration-section .card {
+  margin: 0px;
+}
+
+.ngo-registration-section .card .card-header {
+  background: #D45F1A;
+  padding: 5px 10px;
+  color: #fff;
+  border-bottom: 0;
+}
+
+.ngo-registration-section .card .card-body {
+  padding-top: 0px;
+  padding: 12px;
+}
+
+.ngo-registration-section .card .card-header .fw-semibold {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.ngo-registration-section .ant-form-item .ant-form-item-label>label.ant-form-item-required::before {
+  display: inline-block;
+  margin-inline-end: 4px;
+  color: #ff4d4f;
+  font-size: 14px;
+  font-family: SimSun, sans-serif;
+  line-height: 23px;
+  content: "*";
+}
+
+.ngo-registration-section .ant-form-item .ant-form-item-label>label {
+  align-items: self-start;
+}
+
+.ngo-registration-section .register-box {
+  min-width: 660px;
+  max-height: 90vh;
+  overflow: hidden;
+  background: #514848b5;
+}
+
+.register-container .curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100% - 660px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ngo-registration-section.register-container .curve:after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0% 100px 0;
+  box-shadow: 0 0 0 999px #514848b5;
+  border-bottom: 5px solid #d45f1a;
+}
+
+
+
+.ngo-registration-section.register-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(15 16 16 / 10%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+.ngo-registration-section .register-body input {
+  background-color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  outline: 0;
+  padding: 8px 12px;
+  transition: all .5s;
+  border: 1px solid #ffffff;
+}
+
+.ngo-registration-section .ant-picker .ant-picker-input>input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  font-size: 13px;
+  line-height: 1.5714285714285714;
+  transition: all 0.2s;
+  flex: auto;
+  min-width: 1px;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  background-color: #ffffff80;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  outline: 0;
+  transition: all .5s;
+  border: 1px solid #ffffff;
+}
+
+.ngo-registration-section .ant-btn {
+    font-size: 13px;
+    height: 30px;
+    padding: 4px 13px;
+    width: 100%;
+    text-align: left;
+    justify-content: left;
+    color: #b2b0b0;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    border-radius: 55px;
+}
+
+.register-container .register-box {
+  padding: 0px 0px 30px 0px;
+
+}
+
+.ngo-registration-title {
+  background: #d45f1a;
+  padding: 13px 7px 12px 8px;
+}
+
+.ngo-registration-section .card {
+  background: #ffffff80;
+}
+
+.ngo-registration-section .login-logo img {
+  width: 200px;
+  margin-bottom: 12px;
+  margin-top: -20px;
+}
+
+
+
+.ngo-registration-section .btn-cancel {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #ff4949;
+  color: #fff;
+      height: 35px;
+    padding: 4px 13px;
+}
+
+.ngo-registration-section .btn-submit {
+  text-align: center;
+  display: flex;
+  background: #4096ff;
+  color: #fff;
+  justify-content: center;
+  transition: all 0.6s;
+      height: 35px;
+    padding: 4px 13px;
+}
+
+.ngo-registration-section .btn-submit:hover {
+  background: #D45F1A !important;
+  color: #fff;
+}
+
+/* .ngo-registration-section .register-content {
+  overflow-y: auto;
+  height: 78vh;
+  border-radius: 15px;
+  overflow-x: hidden;
+} */
+
+.ngo-registration-section ::-webkit-scrollbar {
+  cursor: pointer;
+  scrollbar-width: thin;
+  height: 50px !important;
+}
+
+.ngo-registration-section ::-webkit-scrollbar-track {
+  background: #ffffff0a;
+  border-radius: 15px;
+}
+
+.ngo-registration-section ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+   max-height: 50px !important;
+}
+
+.ngo-registration-section ::-webkit-scrollbar-thumb:hover {
+  background: #D45F1A;
+}
+/* ngo-registration-section */
+#ngo-registration-section.ngo-registration-section .register-box {
+    min-width: 55%;
+    max-height: 80vh;
+    overflow: hidden;
+    background: #514848b5;
+}
+#ngo-registration-section.register-container .curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% - 55%);
+    overflow: hidden;
+    z-index: 1;
+}
+#ngo-registration-section .ngo-registration-title {
+    background: #d45f1a;
+    padding: 10px 20px 10px 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+#ngo-registration-section .register-box {
+    border-top-left-radius: 50px;
+}
+#ngo-registration-section .ngo-registration-title  h2{
+  text-transform: capitalize;
+  font-weight: 500;
+    margin-bottom: 0;
+}
+#ngo-registration-section .ngo-registration-title  h6{
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+#ngo-registration-section .ngo-registration-title .left-icon img {
+    width: 40px;
+}
+
+#ngo-registration-section .key-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 11px 3px 3px;
+    border: 2px solid #ff9800;
+    border-radius: 50px;
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#ngo-registration-section .key-pill .icon-circle {
+    width: 27px;
+    height: 27px;
+  background: #ff9800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+}
+#ngo-registration-section .nav-link.active{
+  border: 2px solid #ff9800;
+    border-radius: 50px;
+    background: #ff9800;
+    color: #ffffff;
+}
+#ngo-registration-section .key-pill .text {
+  white-space: nowrap;
+}
+#ngo-registration-section  span.icon-circle {
+    border: 1px solid #d45f1a;
+    background: #d45f1a;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+#ngo-registration-section ul#pills-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#ngo-registration-section .tab-content {
+  overflow-y: auto;
+  height: 40vh;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+#ngo-registration-section  .register-body input {
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    outline: 0;
+    padding: 8px 12px;
+    transition: all .5s;
+    border: 1px solid #d7d7d7;
+    border-radius: 50px;
+}
+#ngo-registration-section .ant-upload-select{
+   padding: 0;
+    transition: all .5s;
+     border-radius: 50px;
+    border: 1px solid #d7d7d7;
+}
+#ngo-registration-section .tab-content {
+    overflow-y: auto;
+    height: 56vh;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ff9800;
+}
+#ngo-registration-section  .ant-input-number-outlined {
+    background: #ffffff;
+    border-width: 1px;
+    border-style: none;
+    border-color: none;
+    border-radius: 50%;
+    outline: none;
+}
+#ngo-registration-section  .ant-form-item-control-input {
+   padding: 0;
+    transition: all .5s;
+     border-radius: 50px;
+}
+#ngo-registration-section  .ant-picker-input input {
+    border-color: none !important;
+    outline: none;
+    border: none;
+  height: 30px !important;
+
+}
+#ngo-registration-section  textarea{
+   border-radius: 50px;
+}
+#ngo-registration-section  .ant-select-selector {
+    background: #ffffff;
+    height: 30px;
+    border-radius: 50px;
+}
+#ngo-registration-section .ant-select-outlined:not .ant-select-selector {
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+    border-radius: 50px;
+    text-align: left;
+    height: 35px !important;
+}
+#ngo-registration-section .ant-picker-outlined {
+    background: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    height: 32px !important;
+    border-radius: 50px !important;
+}
+.label-two label {
+    min-height: 39px;
+}
+.label-two  {
+    min-height: 39px;
+}
+.label-three label {
+    min-height: 57px;
+}
+
+.next-btn {
+  background: #f6a11a;
+  color: #fff;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.next-btn .arrow {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.next-btn:hover {
+  background: #e69500;
+}
+#ngo-registration-section  .register-body input {
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    outline: 0;
+    padding: 5px 12px;
+    border-radius: 50px;
+}

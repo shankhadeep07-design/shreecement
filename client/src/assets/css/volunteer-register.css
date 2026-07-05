@@ -1,0 +1,261 @@
+/* Premium Volunteer Registration Page Styles */
+.volunteer-register-page {
+    background: url('/src/assets/images/sidebar-bg-dark.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 20px;
+}
+
+.volunteer-register-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(227, 30, 36, 0.18) 0%, transparent 40%),
+        linear-gradient(135deg, rgba(15, 17, 21, 0.92) 0%, rgba(35, 12, 14, 0.88) 50%, rgba(15, 17, 21, 0.94) 100%);
+    z-index: 1;
+}
+
+.v-register-container {
+    position: relative;
+    z-index: 10;
+    width: 1100px;
+    max-width: 100%;
+    min-height: 700px;
+    display: flex;
+    border-radius: 32px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+}
+
+.v-register-left {
+    flex: 1.2;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(160deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 100%);
+    color: white;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+}
+
+.v-register-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/src/assets/images/sidebar-bg-dark.png') center center;
+    background-size: cover;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+    filter: grayscale(40%);
+}
+
+.v-register-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 40%, #ff8e8e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2.5px;
+    line-height: 1.05;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
+}
+
+.v-register-left p.lead-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff8e8e;
+    margin-bottom: 20px;
+}
+
+.v-register-left p.description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+}
+
+.csr-image-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.csr-img-card {
+    height: 120px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.csr-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.csr-img-card:hover img {
+    transform: scale(1.1);
+}
+
+.v-register-right {
+    flex: 1;
+    padding: 50px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #ffffff;
+    /* Use solid white for best contrast and professional feel */
+    overflow-y: auto;
+}
+
+.v-register-right h2 {
+    color: #111827;
+    font-size: 2.4rem;
+    margin-bottom: 6px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.v-register-right p.subtitle {
+    color: #6b7280;
+    margin-bottom: 44px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Form Overrides for Glass Look */
+.v-register-right .ant-form-item-label>label {
+    color: #374151 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 2px !important;
+    padding-bottom: 0 !important;
+}
+
+/* Multiselect Component (rmsc) Integration */
+.v-register-right .rmsc {
+    --rmsc-main: #E31E24;
+    --rmsc-hover: #f9fafb;
+    --rmsc-selected: #fef2f2;
+    --rmsc-border: #e5e7eb;
+    --rmsc-gray: #6b7280;
+    --rmsc-bg: #fdfdfd;
+    --rmsc-p: 10px;
+    --rmsc-radius: 12px;
+    --rmsc-h: 46px;
+}
+
+.v-register-right .rmsc .dropdown-container {
+    border: 1.5px solid #e5e7eb !important;
+    background: #fdfdfd !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.v-register-right .rmsc .dropdown-container:focus-within {
+    border-color: #E31E24 !important;
+    box-shadow: 0 0 0 4px rgba(227, 30, 36, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+.v-register-right .ant-input,
+.v-register-right .ant-input-password {
+    border: 1.5px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 12px 18px !important;
+    background: #fdfdfd !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-size: 0.95rem !important;
+}
+
+.v-register-right .ant-input:focus,
+.v-register-right .ant-input-focused {
+    border-color: #E31E24 !important;
+    box-shadow: 0 0 0 4px rgba(227, 30, 36, 0.1) !important;
+    background: #fff !important;
+    transform: translateY(-1px);
+}
+
+.v-register-right .ant-form-item {
+    margin-bottom: 24px !important;
+}
+
+/* Fix dropdown overlap */
+.v-register-right .rmsc .dropdown-content {
+    z-index: 100 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 12px !important;
+    margin-top: 5px !important;
+}
+
+.v-register-right .reg-btn {
+    width: 100%;
+    padding: 14px !important;
+    height: 56px !important;
+    background: linear-gradient(135deg, #E31E24 0%, #bb181d 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 14px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(227, 30, 36, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-top: 20px !important;
+}
+
+.v-register-right .reg-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(227, 30, 36, 0.45) !important;
+    filter: brightness(1.05);
+}
+
+.v-register-right .login-link-container {
+    text-align: center;
+    margin-top: 30px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.v-register-right .login-link-container span {
+    color: #E31E24;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.v-register-right .login-link-container span:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .v-register-container {
+        flex-direction: column;
+        width: 600px;
+        height: auto;
+    }
+
+    .v-register-left {
+        padding: 40px;
+    }
+}

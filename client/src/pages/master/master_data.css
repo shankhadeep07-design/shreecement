@@ -1,0 +1,12 @@
+.delete_button_box {
+    display: flex;
+    justify-content: center;
+}
+
+#add_company_form .form-group {
+    margin-top: 10px;
+}
+
+#add_company_form .section-heading:not(:first-child) {
+    margin-top: 20px !important;
+}
